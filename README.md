@@ -42,10 +42,10 @@ python manage.py runserver
 ```
 POST /api/v1/posts/
 ```
-А в body передать значения "text", "image", "group".
+А в body передать значения `"text", "image", "group"`.
 
 Для того чтобы обновить публикацию, юзаем:
 ```
 PUT /api/v1/posts/{id}/
 ```
-А в body передаем все теже "text", "image", "group".
+А в body передаем все теже `"text", "image", "group"`.
