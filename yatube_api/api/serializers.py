@@ -21,6 +21,7 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = '__all__'
         model = Comment
 
+
 class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -36,7 +37,6 @@ class FollowSerializer(serializers.ModelSerializer):
     following = serializers.SlugRelatedField(
         slug_field='username', queryset=User.objects.all()
     )
-
 
     def validate(self, data):
         if data['user'] == data['following']:

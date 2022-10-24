@@ -50,7 +50,8 @@ class CommentViewSet(viewsets.ModelViewSet):
 class CreateListViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
-    viewsets.GenericViewSet):
+    viewsets.GenericViewSet
+    ):
     pass
 
 
