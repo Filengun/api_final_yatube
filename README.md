@@ -56,3 +56,6 @@ POST /api/v1/posts/
 PUT /api/v1/posts/{id}/
 ```
 А в body передаем все теже `"text", "image", "group", "author"`.
+
+------------------------------------------------------------
+Создатель [Олег Борисович](https://github.com/Filengun)
