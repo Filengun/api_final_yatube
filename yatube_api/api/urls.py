@@ -17,19 +17,28 @@ router_v1.register('posts', PostViewSet)
 router_v1.register(r'posts/(?P<post_id>\d+)/comments',
                    CommentViewSet, basename='comments')
 router_v1.register('follow', FollowViewSet, basename='followers')
-router_v1.register(
-    'follow',
-    FollowViewSet,
-    basename='follow'
-)
-router_v1.register(
-    r'posts/(?P<post_id>\d+)/comments',
-    CommentViewSet,
-    basename='comments'
-)
+
+
+jwt_patterns = [
+    path(
+        'jwt/create/',
+        TokenObtainPairView.as_view(),
+        name='token_obtain_pair'
+    ),
+    path(
+        'jwt/refresh/',
+        TokenRefreshView.as_view(),
+        name='token_refresh'
+    ),
+    path(
+        'jwt/verify/',
+        TokenVerifyView.as_view(),
+        name='token_verify'
+    )
+]
 
 urlpatterns = [
     path('v1/', include(router_v1.urls)),
     path('v1/', include('djoser.urls')),
-    path('v1/', include('djoser.urls.jwt')),
+    path('v1/', include(jwt_patterns)),
 ]
