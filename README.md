@@ -44,6 +44,20 @@ python manage.py runserver
 ```
 ------------------------------------------------------------
 ### Примеры запросов API
+Регистрация
+Эндпоинт: ```POST http://127.0.0.1:8000/api/v1/jwt/refresh/```
+Запрос:
+```
+{
+ "username": "filengun",
+ "password": "parol",
+ "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY2NjgxODkyMCwianRpIjoiMWYwMmQzNmQ2ODk1NGU1ZDljMzViYWZkYTE2MzMwOWUiLCJ1c2VyX2lkIjoyfQ.gHKBSRI93L8iHLf919FrFOWyo4khfXYY-9oBK2CgnT4"
+}
+```
+Ответ:
+```
+
+```
 
 Для того чтобы создать публикацию, необходимо аутентифицироваться и использовать:
 ```
