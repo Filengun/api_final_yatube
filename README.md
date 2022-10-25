@@ -1,7 +1,14 @@
 # СОЦИАЛЬНАЯ СЕТЬ API
 ### Описание
 Этот проект является социальной сетью под названием YATUBE. Здесь можно публиковать записи, подписываться\отписываться на других юзеров, комментировать записи. Все это возможно в этом проекте, но пока через API. В фронтенд мы пока не особо умеем, но скоро чтото да появится)
-
+------------------------------------------------------------
+### Используемые библиотеки:
+- [Python 3.7+](https://www.python.org/)
+- [Django 2.2.16](https://www.djangoproject.com)
+- [Django Rest Framework 3.12.4](https://www.django-rest-framework.org)
+- [Djoser](https://djoser.readthedocs.io/en/latest/getting_started.html)
+- [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+- [SQLite3](https://www.sqlite.org/index.html)
 ------------------------------------------------------------
 ### Установка:
 #### *Действия для юзеров Windows**
@@ -48,5 +55,5 @@ POST /api/v1/posts/
 ```
 PUT /api/v1/posts/{id}/
 ```
-А в body передаем все теже `"text", "image", "group"`.
->>>>>>> 43259f01c33d74c4217fd0d707ba2e28bd0cd2f9
+А в body передаем все теже `"text", "image", "group", "author"`.
+
